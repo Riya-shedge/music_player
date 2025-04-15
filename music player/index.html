@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>FEEL THE MUSIC</h1>
+  </header>
+
+  <main>
+    <div class="left-panel">
+      <img src="public/th.jpg" class="album-art" alt="Album Art"/>
+      <div class="volume-control">
+        <i class="volume-icon">🔊</i>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5" />
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div class="song-info">
+        <h2>Can't Zzz</h2>
+        <p>Maurice Chase</p>
+      </div>
+      <input type="range" id="seek" min="0" value="0" />
+      <div class="controls">
+        <button onclick="prevSong()">⏮️</button>
+        <button onclick="togglePlay()">⏯️</button>
+        <button onclick="nextSong()">⏭️</button>
+      </div>
+    </div>
+  </main>
+
+  <audio id="audio"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
